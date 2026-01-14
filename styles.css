@@ -1,0 +1,85 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #405DE6, #833AB4, #F77737);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Fixed height to match screen */
+    overflow: hidden; /* Removes scrolling from the background */
+    padding: 10px;
+}
+
+.main-container {
+    background: #fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px 30px; /* Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    /* Allow form to scale down on small screens but stay centered */
+    max-height: 95vh; 
+}
+
+h2 { 
+    text-align: center; 
+    color: #333; 
+    margin-bottom: 10px; 
+    font-size: 22px; 
+}
+
+.row { 
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 8px; /* Tight gaps */
+}
+
+.form-group { flex: 1; }
+
+label { 
+    display: block; 
+    font-size: 11px; 
+    font-weight: bold; 
+    margin-bottom: 3px; 
+    color: #555; 
+}
+
+input, select {
+    width: 100%;
+    padding: 8px; /* Smaller inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+input.invalid, select.invalid { border: 2px solid #e74c3c; }
+
+.error-msg { color: #e74c3c; font-size: 10px; display: none; }
+
+.checkbox-container { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin-top: 5px;
+}
+
+.checkbox-container input[type="checkbox"] { width: 14px; height: 14px; }
+.checkbox-container label { margin-bottom: 0; font-weight: normal; font-size: 12px; }
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #833AB4, #E1306C);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* On very small screens, allow a little scrolling inside the box so fields aren't cut off */
+@media (max-height: 700px) {
+    .main-container { overflow-y: auto; }
+}
